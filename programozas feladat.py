@@ -17,7 +17,6 @@
 # #   xx Töltsd fel az futtatás után a rendszert 1 szállodával, 3 szobával és 5 foglalással, mielőtt a felhasználói adatbekérés megjelenik. (10 pont)
 
 from datetime import datetime
-import winsound
 
 # Osztályok Létrehozása
 
