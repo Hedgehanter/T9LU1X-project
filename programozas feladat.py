@@ -87,9 +87,9 @@ class Szalloda:
 hotel = Szalloda("Pihenő Hotel")
 
 # Rendszer feltöltés: Szobák hozzáadása
-hotel.add_szoba(EgyagyasSzoba("101","Kád"))
-hotel.add_szoba(EgyagyasSzoba("102","Zuhany"))
-hotel.add_szoba(KetagyasSzoba("201","Jacuzzi"))
+hotel.add_szoba(EgyagyasSzoba("101","Fürdő"))
+hotel.add_szoba(EgyagyasSzoba("102","Zuhanyzó"))
+hotel.add_szoba(KetagyasSzoba("201","Jacuzzis"))
 
 # Rendszer feltöltés: Foglalások hozzáadása
 hotel.fgs("101", datetime(2024, 6, 10))
