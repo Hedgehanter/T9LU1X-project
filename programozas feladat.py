@@ -92,11 +92,11 @@ hotel.add_szoba(EgyagyasSzoba("102","Zuhany"))
 hotel.add_szoba(KetagyasSzoba("201","Jacuzzi"))
 
 # Rendszer feltöltés: Foglalások hozzáadása
-hotel.fgs("101", datetime(2024, 5, 10))
-hotel.fgs("102", datetime(2024, 5, 12))
-hotel.fgs("201", datetime(2024, 5, 15))
-hotel.fgs("101", datetime(2024, 5, 15))
-hotel.fgs("102", datetime(2024, 5, 15))
+hotel.fgs("101", datetime(2024, 3, 10))
+hotel.fgs("102", datetime(2024, 3, 12))
+hotel.fgs("201", datetime(2024, 3, 15))
+hotel.fgs("101", datetime(2024, 3, 15))
+hotel.fgs("102", datetime(2024, 3, 15))
 
 # Felhasználói interfész
 while True:
