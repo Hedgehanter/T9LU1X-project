@@ -86,16 +86,16 @@ class Szalloda:
 hotel = Szalloda("Pihenő Hotel")
 
 # Rendszer feltöltés: Szobák hozzáadása
-hotel.add_szoba(EgyagyasSzoba("101","Fürdő"))
-hotel.add_szoba(EgyagyasSzoba("102","Zuhanyzó"))
-hotel.add_szoba(KetagyasSzoba("201","Jacuzzis"))
+hotel.add_szoba(EgyagyasSzoba("101","Kád"))
+hotel.add_szoba(EgyagyasSzoba("102","Zuhany"))
+hotel.add_szoba(KetagyasSzoba("201","Jacuzzi"))
 
 # Rendszer feltöltés: Foglalások hozzáadása
-hotel.fgs("101", datetime(2024, 6, 10))
-hotel.fgs("102", datetime(2024, 6, 12))
-hotel.fgs("201", datetime(2024, 6, 15))
-hotel.fgs("101", datetime(2024, 6, 15))
-hotel.fgs("102", datetime(2024, 6, 15))
+hotel.fgs("101", datetime(2024, 3, 10))
+hotel.fgs("102", datetime(2024, 3, 12))
+hotel.fgs("201", datetime(2024, 3, 15))
+hotel.fgs("101", datetime(2024, 3, 15))
+hotel.fgs("102", datetime(2024, 3, 15))
 
 # Felhasználói interfész
 while True:
@@ -115,14 +115,12 @@ while True:
             datum = datetime.strptime(datum, "%Y-%m-%d")
             if datum < datetime.now():
                 print("\nHibás dátum! A foglalás csak jövőbeni időpontra lehetséges.")
-                winsound.PlaySound("SystemHand", winsound.SND_ALIAS)
             else:
                 ar = hotel.fgs(szobsz, datum)
                 if ar:
                     print(f"A foglalás sikeres! Az ár: {ar} Ft")
                 else:
                     print("\nHibás szobaszám!")
-                    winsound.PlaySound("SystemHand", winsound.SND_ALIAS)
         except ValueError:
             print("\nHibás dátum formátum!")
     elif case == "2":
@@ -135,10 +133,8 @@ while True:
                 print("\nA foglalás sikeresen lemondva.")
             else:
                 print("\nNincs ilyen foglalás.")
-                winsound.PlaySound("SystemHand", winsound.SND_ALIAS)
         except ValueError:
             print("\nHibás dátum formátum!")
-            winsound.PlaySound("SystemHand", winsound.SND_ALIAS)
     elif case == "3":
         hotel.list_fgs_ok()
     elif case == "4":
@@ -156,4 +152,3 @@ while True:
         break
     else:
         print("\nHibás választás!")
-        winsound.PlaySound("SystemHand", winsound.SND_ALIAS)
